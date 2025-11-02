@@ -29,8 +29,8 @@ app.use((req, res, next) => {
 
 // C言語プログラムを実行するエンドポイント
 app.get('/run-test', (req, res) => {
-    // Linux環境での実行ファイルパス
-    const execPath = path.join(__dirname, 'test');
+    // Windows環境での実行ファイルパス
+    const execPath = path.join(__dirname, 'test.exe');
     
     exec(execPath, (error, stdout, stderr) => {
         if (error) {
